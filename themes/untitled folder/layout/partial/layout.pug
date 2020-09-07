@@ -1,0 +1,40 @@
+include ../base/_functions
+include ../base/_config
+include ../image/_image
+include ../rd-navbar/_rd-navbar
+include ../logo/_logo
+include ../preloader/_preloader
+
+block variables
+- main();
+
+doctype html
+html( lang='en', class= htmlClass )
+    head
+        title
+            block site_title
+        meta(name='X-UA-Compatible', content='IE=edge')
+        meta( charset='utf-8' )
+        meta( name='viewport', content='width=device-width, height=device-height, initial-scale=1.0' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        link(rel='search', type='application/opensearchdescription+xml', href=url_for('atom.xml'), title=config.title)
+        link( rel='icon', href='media/favicon.ico', type='image/x-icon' )
+        link(rel='stylesheet', href=url_for('css/theme.css'))
+        script(src=url_for('js/jquery/jquery.min.js'))
+        script(src=url_for('js/jquery/jquery-ui.min.js'))
+
+        block description
+            meta(name='description', content=config.description ? config.description : __('meta_description'))
+    body
+        .wrapper
+            +rd-navbar
+            .page( class= pageClass )
+                .content
+                    block page
+                    block container
+                    block pagination
+                    block copyright
+        script(src=url_for('js/base/core.min.js'))
+        script(src=url_for('js/base/script.js'))
+        script(src=url_for('js/jqueryUI.min.js'))
+        script(src=url_for('js/jquery-mouseWheel.min.js'))     
