@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <script src="./config.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="media/favicon.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="components/base/base.css">
+    <script src="components/base/core.min.js"></script>
+    <script src="components/base/script.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <!--RD Navbar-->
+<%- partial('_partial/navbar', {pagination: config.category, index: true}) %>  
+      <div class="page">
+        <div class="content">
+          <!--RD Navbar-->
+
+
+
+
+          <!-- Get in touch-->
+          <section class="section section-lg" id="contacts">
+            <div class="container">
+              <div class="row row-30 align-items-xl-center justify-content-xxl-between">
+                <div class="col-lg-6">
+                  <h2>READY TO TAME YOUR MARKETING MONSTERS?</h2>
+                  <p class="bigger">We are located in the better half of our namesake, the City of Oaks, Raleigh, NC.</p>
+                  <div class="neumorphic">
+                    <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1yq98v6TP6gADuI8HH8xmCsXzjZzL4SPZD4Oq8US2hxLNN9hBMQYtpKWAGIBw7ald">
+                      <script src="https://webforms.pipedrive.com/f/loader"></script>
+                    </div>
+                  </div>
+                  <!--form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+                  .row.row-30
+                  	.col-xs-6
+                  		.form-group
+                  			input.form-control( type='text', name='name', placeholder='Your name *', data-constraints='@Required' )
+                  	.col-xs-6
+                  		.form-group
+                  			input.form-control( type='email', name='email', placeholder='Your e-mail address *', data-constraints='@Email @Required' )
+                  	.col-12
+                  		.form-group
+                  			textarea.form-control( name='question', placeholder='Your question', rows='5', data-constraints='@Required' )
+                  .offset-sm.group-40.d-flex.flex-wrap.flex-xs-nowrap.align-items-center
+                  	button.btn( type='submit' ) Subscribe
+                  	+checkbox({ id: 'check1' }) Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  -->
+                </div>
+                <div class="col-lg-6 col-xxl-5">
+                  <div class="box px-xl-3 px-xxl-4">
+                    <div class="row row-30">
+                      <div class="col-md-6 col-lg-12 col-xl-6">
+                        <h4>Get The Scoop:</h4>
+                        <div class="group-30 offset-sm"><a class="btn pl-1" href="#"><span class="btn-icon icon icon-round icon-sm icon-primary icon-style-3 mdi-twitter"></span><span>Twitter</span></a><a class="btn pl-1" href="#"><span class="btn-icon icon icon-round icon-sm icon-primary icon-style-3 mdi-linkedin"></span><span>LinkedIn</span></a></div>
+                      </div>
+                      <div class="col-md-6 col-lg-12 col-xl-6">
+                        <h4>Contacts:</h4>
+                        <table class="table table-sm table-responsive-xl table-no-bordered bigger">
+                          <tbody>
+                            <tr>
+                              <td class="text-right text-600 pl-0 align-middle">Ph.</td>
+                              <td class="biggest"><a class="link-inherit" href="tel:#">1-919-823-4333</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-right text-600 pl-0">Mail.</td>
+                              <td><a class="link-inherit" href="mailto:#">hello@oakwave.com</a></td>
+                            </tr>
+                            <tr>
+                              <td class="text-right text-600 pl-0">Office.</td>
+                              <td>10324 Baileywick Raleigh, NC 27613</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <hr class="divider">
+                    <div class="group-20 d-flex flex-wrap align-items-center justify-content-between">
+                      <div>
+                                  <!-- List social-->
+                                  <ul class="list list-social">
+                                    <li class="list-social-item"><a class="icon icon-circle icon-md icon-style-1 mdi-facebook" href="https://www.facebook.com/oakwaveco"></a></li>
+                                    <li class="list-social-item"><a class="icon icon-circle icon-md icon-style-1 mdi-twitter" href="https://www.twitter.com/oakwaveco"></a></li>
+                                    <li class="list-social-item"><a class="icon icon-circle icon-md icon-style-1 mdi-linkedin" href="https://www.linkedin.com/company/oakwave"></a></li>
+                                  </ul>
+                      </div>
+                      <div>
+                                  <!-- Copyright-->
+                                  <p class="rights bigger"><span>&copy; 2020.&nbsp;</span><span>OAKwave</span><span>. All rights reserved</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-output snackbar snackbar-secondary" id="form-output-global"></div>
+          </section>
+        </div>
+      </div>
+      <!-- Preloader-->
+      <div class="preloader">
+        <div class="preloader-inner">
+          <div class="preloader-dot"></div>
+          <div class="preloader-dot"></div>
+          <div class="preloader-dot"></div>
+          <div class="preloader-dot"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    $(document).ready(function () {
+    $("#sidebar").mCustomScrollbar({
+    theme: "minimal"
+    });
+    $('#sidebarCollapse').on('click', function () {
+    $('#sidebar, .content').toggleClass('active');
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+    });
+  </script>
+</html>
