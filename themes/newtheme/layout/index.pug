@@ -1,15 +1,11 @@
 ---
 permalink:  index.html
-layout: layout.pug
 ---
 
-extends ../layout/partial/layout
-
-block variables
-	- pageName = 'Home'; 
-	- menu = menuHome;
-	include section/_intro
+extends partial/layout
+	
 block page 
+	include section/_intro
 	+rd-navbar
 	include section/_about
 	include section/_features-3

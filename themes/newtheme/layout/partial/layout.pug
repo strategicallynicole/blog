@@ -1,12 +1,10 @@
-include ../base/_functions
 include ../base/_config
+include ../base/_functions
 include ../image/_image
 include ../rd-navbar/_rd-navbar
 include ../logo/_logo
 include ../preloader/_preloader
 
-block variables
-- main();
 
 doctype html
 html( lang='en', class= htmlClass )
@@ -34,7 +32,5 @@ html( lang='en', class= htmlClass )
                     block container
                     block pagination
                     block copyright
-        script(src=url_for('js/base/core.min.js'))
         script(src=url_for('js/base/script.js'))
         script(src=url_for('js/jqueryUI.min.js'))
-        script(src=url_for('js/jquery-mouseWheel.min.js'))     

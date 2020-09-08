@@ -1,4 +1,6 @@
 'use strict';
+window.addEventListener("load", () => {console.log("window load")})
+
 
 // Global components list
 let components = window.components = {};

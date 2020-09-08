@@ -88,6 +88,9 @@
 	}
 
 	function directMenuPass ( item, cb ) {
+		if (!item) 
+			return
+
 		if ( cb ) cb( item );
 		if ( item.child ) {
 			if ( item.child instanceof Array ) {
@@ -106,16 +109,22 @@
 	}
 
 	function main () {
+		return;
+		
 		// Primary menu processing
 		procNavigation( menu );
 
 		// Setting home page, active elements and generating breadcrumbs
 		directMenuPass( menu, function ( item ) {
+			if (!item) {
+				console.log("menu item undefined, skipping")
+				return
+			}
 			if ( item.home ) {
 				homePage = item;
 			}
 
-			if ( typeof( pageId ) !== 'undefined' ) {
+			if ( typeof( pageId ) !== 'undefined') {
 				if ( item.id && item.id === pageId ) {
 					inverseMenuPass( item, function ( item ) {
 						if ( [ 'root-item', 'dropdown-item', 'megamenu-item', 'item' ].includes( item.type ) ) {
